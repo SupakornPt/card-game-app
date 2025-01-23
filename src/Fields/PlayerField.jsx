@@ -42,7 +42,7 @@ function PlayerField(props) {
                 })}
             </div>
             <div className='flex flex-col gap-2 items-center'>
-                <img src="public/PicDeco/human.png" alt="humanPic" className='w-[120px]' />
+                <img src="/PicDeco/human.png" alt="humanPic" className='w-[120px]' />
                 <div className="flex flex-row gap-2 text-xl font-bold text-white">
                     <div>Player score :</div>
                     <div>{playerScore}</div>
