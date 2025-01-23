@@ -16,14 +16,14 @@ function CompareField(props) {
     const handleOnLog = () => {
         if (log.length !== 0) {
             Swal.fire({
-                title: 'Log file',
+                title: 'Play History',
                 html: log.map((data) => `<p>(${data}</p>`).join(""),
                 imageUrl: "/PicDeco/log.png",
                 confirmButtonText: 'Close',
             })
         } else {
             Swal.fire({
-                title: 'Log file',
+                title: 'Play History',
                 text: `No data`,
                 imageUrl: "/PicDeco/log.png",
                 confirmButtonText: 'Close',
@@ -112,7 +112,7 @@ function CompareField(props) {
             </div>
             <div className='flex flex-row gap-60 justify-center'>
                 {openFight && (<button onClick={handleOnFight} className=' hover:bg-orange-500 hover:animate-bounce bg-orange-600 text-white py-2 px-5 rounded-md text-xl font-bold '>Fight</button>)}
-                <button onClick={handleOnLog} className=' hover:bg-blue-500 hover:animate-bounce bg-blue-600 text-white py-2 px-5 rounded-md text-xl font-bold '>Log</button>
+                <button onClick={handleOnLog} className=' hover:bg-blue-500 hover:animate-bounce bg-blue-600 text-white py-2 px-5 rounded-md text-xl font-bold '>History</button>
             </div>
             <div className="flex gap-5 justify-center">
                 {compare?.playerSelect
