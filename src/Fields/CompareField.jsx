@@ -18,14 +18,14 @@ function CompareField(props) {
             Swal.fire({
                 title: 'Log file',
                 html: log.map((data) => `<p>(${data}</p>`).join(""),
-                imageUrl: "src/assets/log.png",
+                imageUrl: "public/PicDeco/log.png",
                 confirmButtonText: 'Close',
             })
         } else {
             Swal.fire({
                 title: 'Log file',
                 text: `No data`,
-                imageUrl: "src/assets/log.png",
+                imageUrl: "public/PicDeco/log.png",
                 confirmButtonText: 'Close',
             })
         }
@@ -53,7 +53,7 @@ function CompareField(props) {
             Swal.fire({
                 title: 'Player Win',
                 text: 'Easy Game!',
-                imageUrl: "src/assets/human.png",
+                imageUrl: "public/PicDeco/human.png",
                 confirmButtonText: 'Continue',
             });
             setPlayerScore((prev) => prev + 1)
@@ -61,7 +61,7 @@ function CompareField(props) {
             Swal.fire({
                 title: 'Bot Win',
                 text: 'Keep fighting!',
-                imageUrl: "src/assets/bot.png",
+                imageUrl: "public/PicDeco/bot.png",
                 confirmButtonText: 'Continue',
             });
             setBotScore((prev) => prev + 1)
@@ -69,7 +69,7 @@ function CompareField(props) {
             Swal.fire({
                 title: 'Draw',
                 text: 'Only one can win!',
-                imageUrl: "src/assets/draw.png",
+                imageUrl: "public/PicDeco/draw.png",
                 confirmButtonText: 'Continue',
             });
             addCard(2, deck, playerCard, botCard)

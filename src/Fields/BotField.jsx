@@ -13,7 +13,7 @@ function BotField(props) {
                 })}
             </div>
             <div className='flex flex-col gap-2 items-center'>
-                <img src="src/assets/bot.png" alt="humanPic" className='w-[120px]' />
+                <img src="public/PicDeco/bot.png" alt="humanPic" className='w-[120px]' />
                 <div className="flex flex-row gap-2 text-xl font-bold text-white">
                     <div>Bot score :</div>
                     <div>{botScore}</div>

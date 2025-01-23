@@ -74,14 +74,14 @@ export default function App() {
         Swal.fire({
           title: 'You Win!',
           text: `Player: ${playerScore} VS Bot: ${botScore}`,
-          imageUrl: `src/assets/celebration.png`,
+          imageUrl: `public/PicDeco/celebration.png`,
           confirmButtonText: 'OK',
         });
       } else {
         Swal.fire({
           title: 'You Lose!',
           text: `Player: ${playerScore} VS Bot: ${botScore}`,
-          imageUrl: `src/assets/sad.png`,
+          imageUrl: `public/PicDeco/sad.png`,
           confirmButtonText: 'OK',
         });
       }
@@ -96,15 +96,15 @@ export default function App() {
 
   return (
 
-    <div className="flex flex-col min-h-screen justify-center items-center bg-[url('src/assets/bg.jpg')]  bg-center">
+    <div className="flex flex-col min-h-screen justify-center items-center bg-[url('public/PicDeco/bg.jpg')]  bg-center">
       {
         openStart
           ? <div className="flex flex-col gap-5 items-center">
-            <img src="src/assets/king.png" alt="kingPic" className="w-[400px]" />
+            <img src="public/PicDeco/king.png" alt="kingPic" className="w-[400px]" />
             <div className="flex flex-row gap-5">
-              <img src="src/assets/poker.png" alt="cardPic" />
+              <img src="public/PicDeco/poker.png" alt="cardPic" />
               <div className="font-bold text-5xl text-white">Welcome to card game</div>
-              <img src="src/assets/poker.png" alt="cardPic" />
+              <img src="public/PicDeco/poker.png" alt="cardPic" />
             </div>
             <button onClick={handleOnStart} className="hover:text-red-600 hover:animate-bounce font-semibold text-3xl text-white">New Game</button>
           </div>

@@ -10,28 +10,21 @@ function PlayerField(props) {
 
     const handleOnSelect = (cardSelectedByPlayer) => {
         if (compare.playerSelect === null) {
-            console.log('playerCard', playerCard)
             setCompare({ playerSelect: cardSelectedByPlayer })
             const updatedPlayerCards = playerCard.filter((card) => pokerDeck[card] !== cardSelectedByPlayer)
             setPlayerCard(updatedPlayerCards)
-
             const randomIndexLocation = Math.floor(Math.random() * botCard.length)
             const indexCardSelectedByBot = botCard[randomIndexLocation]
             setCompare({ playerSelect: cardSelectedByPlayer, botSelect: pokerDeck[indexCardSelectedByBot] })
             const updatedBotCards = botCard.filter((_, index) => index !== randomIndexLocation)
             setBotCard(updatedBotCards)
         } else {
-            console.log('playerCard', playerCard)
             let currentCard = compare.playerSelect
             let cardIdx = pokerDeck.findIndex((card) => card?.cardName === currentCard.cardName)
-            console.log(cardIdx)
             const addOldPlayerCards = [...playerCard,]
             addOldPlayerCards.push(cardIdx)
-            console.log('addOldPlayerCards', addOldPlayerCards)
             setCompare(state => ({ ...state, playerSelect: cardSelectedByPlayer }))
             const newUpdatedPlayerCards = addOldPlayerCards.filter((card) => pokerDeck[card] !== cardSelectedByPlayer)
-            console.log('newUpdatedPlayerCards', newUpdatedPlayerCards)
-            console.log('playerCard1', playerCard)
             setPlayerCard(newUpdatedPlayerCards)
         }
         setOpenFight(true)
@@ -49,7 +42,7 @@ function PlayerField(props) {
                 })}
             </div>
             <div className='flex flex-col gap-2 items-center'>
-                <img src="src/assets/human.png" alt="humanPic" className='w-[120px]' />
+                <img src="public/PicDeco/human.png" alt="humanPic" className='w-[120px]' />
                 <div className="flex flex-row gap-2 text-xl font-bold text-white">
                     <div>Player score :</div>
                     <div>{playerScore}</div>
